@@ -2,7 +2,7 @@
 terraform {
   backend "s3" {
     bucket         = "rishika-terraform-state-bucket"
-    key            = "prod/terraform.tfstate"  # Unique key for prod
+    key            = "terraform.tfstate"  # Unique key for prod
     region         = "us-east-1"
     
   }
