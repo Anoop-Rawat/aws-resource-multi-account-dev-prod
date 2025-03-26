@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "anoop.cse3-terraform-state-bucket"
-    key            = "dev/terraform.tfstate"  # Unique key for dev
+    key            = "terraform.tfstate"  # Unique key for dev
     region         = "us-east-1"
     
   }
