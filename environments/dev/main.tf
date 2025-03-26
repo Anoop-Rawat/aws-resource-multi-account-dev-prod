@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "your-terraform-state-bucket"
+    bucket         = "anoop.cse3-terraform-state-bucket"
     key            = "dev/terraform.tfstate"  # Unique key for dev
     region         = "us-east-1"
     dynamodb_table = "terraform-locks"
