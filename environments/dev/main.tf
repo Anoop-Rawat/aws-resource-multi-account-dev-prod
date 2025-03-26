@@ -3,7 +3,7 @@ terraform {
     bucket         = "anoop.cse3-terraform-state-bucket"
     key            = "dev/terraform.tfstate"  # Unique key for dev
     region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
+    
   }
 }
 module "ec2_dev" {
