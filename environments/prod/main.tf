@@ -8,6 +8,20 @@ terraform {
   }
 }
 
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  alias = "prod"
+}
+
+
 module "ec2_prod" {
   source        = "../../modules/ec2"
   ami_id        = "ami-08b5b3a93ed654d19"  # Replace with valid AMI
