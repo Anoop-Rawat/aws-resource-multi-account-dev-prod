@@ -6,6 +6,21 @@ terraform {
     
   }
 }
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "aws" {
+  alias = "dev"
+}
+
+
 module "ec2_dev" {
   source        = "../../modules/ec2"
   ami_id        = "ami-08b5b3a93ed654d19"  # Replace with a valid AMI ID for us-east-1
